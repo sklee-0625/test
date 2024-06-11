@@ -19,5 +19,3 @@ export default function Todo({ todo }) {
     </>
   );
 }
-
-//test
