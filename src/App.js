@@ -1,16 +1,16 @@
-import React from 'react';
-import './App.css';
-import Button1 from './component/Button1';
-import Button2 from './component/Button2';
-import TailwindComponent from './component/TailwindComponent';
+import React, { useState } from 'react';
+import './index.css';
+import Header from './component/Header/Header';
+import TodoList from './component/TodoList/TodoList';
 //
 //
+
+const filters = ['all', 'active', 'completed'];
 export default function App() {
   return (
     <>
-      <Button1 />
-      <Button2 />
-      <TailwindComponent />
+      <Header filters={filters} />
+      <TodoList />
     </>
   );
 }

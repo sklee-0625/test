@@ -1,0 +1,9 @@
+.todoItem {
+  display: flex;
+  justify-content: space-between;
+}
+
+.todoItem > label {
+  display: flex;
+  gap: 0.5rem;
+}
