@@ -17,14 +17,16 @@ export default function TodoList() {
   ]);
   //
   return (
-    <sesction>
+    <sesction className={styles.contain}>
       <ul className={styles.box}>
         <Todo todo={todo} />
       </ul>
 
-      <div>
-        <input type='text' />
-        <button>Add</button>
+      <div className={styles.footer}>
+        <div className={styles.footerIn}>
+          <input type='text' />
+          <button>Add</button>
+        </div>
       </div>
     </sesction>
   );

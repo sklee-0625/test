@@ -1,3 +1,31 @@
+.contain {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
 .box {
   padding: 1rem;
+}
+
+.footer {
+  background-color: var(--color-grey);
+  padding: 1rem;
+}
+.footerIn {
+  display: flex;
+  height: 32px;
+  border-radius: 0.3rem;
+  overflow: hidden;
+}
+.footerIn input {
+  width: 100%;
+  outline: none;
+}
+.footerIn button {
+  flex-shrink: 0;
+  width: 75px;
+  background: var(--color-accent);
+  color: #fff;
 }
