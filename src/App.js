@@ -1,20 +1,28 @@
-import React, { useState } from 'react';
 import './index.css';
-import Header from './component/Header/Header';
-import TodoList from './component/TodoList/TodoList';
-import { DarkModeProvider } from './context/DarkModeContext';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+
+import Home from './pages/Home';
+import Videos from './pages/Videos';
+import NotFound from './pages/NotFound';
+import Root from './pages/Root';
+import VideoDetail from './pages/VideoDetail';
+
 //
 //
 
-const filters = ['all', 'active', 'completed'];
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Root />,
+    errorElement: <NotFound />,
+    children: [
+      { index: true, element: <Home /> },
+      { path: '/videos', element: <Videos /> },
+      { path: '/videos/:videoId', element: <VideoDetail /> },
+    ],
+  },
+]);
 
 export default function App() {
-  const [filter, setFilter] = useState(filters[0]);
-
-  return (
-    <DarkModeProvider>
-      <Header filters={filters} filter={filter} filterChange={setFilter} />
-      <TodoList filter={filter} />
-    </DarkModeProvider>
-  );
+  return <RouterProvider router={router} />;
 }
