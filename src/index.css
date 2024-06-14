@@ -10,3 +10,17 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.container {
+  display: flex;
+  gap: 1rem;
+}
+
+button {
+  background-color: #efefef;
+  padding: 0.3rem 1rem;
+}
+
+li {
+  margin: 1rem 0;
+}
